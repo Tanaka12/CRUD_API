@@ -1,0 +1,1 @@
+from .productSchema import ProductSchema
