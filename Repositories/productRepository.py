@@ -19,8 +19,8 @@ class ProductRepository:
 
     def update_product(self, product: Product) -> Product:
         with Session(self.engine) as session:
-            session.query(Product).filter(Product.id==id).update({"name": product.name, "description": product.description})
-            return session.query(Product).filter(Product.id==id).scalar()
+            session.query(Product).filter(Product.id==product.id).update({"name": product.name, "description": product.description})
+            return session.query(Product).filter(Product.id==product.id).scalar()
 
     def create_product(self, product: Product) -> Product:
         with Session(self.engine) as session:
