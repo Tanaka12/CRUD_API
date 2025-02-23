@@ -1,1 +1,0 @@
-from .productController import products_router

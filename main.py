@@ -1,10 +1,10 @@
 from dotenv import load_dotenv
 from fastapi import FastAPI
 import os
-from sqlalchemy import create_engine, Engine
+from sqlalchemy import create_engine
 import uvicorn
 
-from Controllers import products_router
+from API import router as api_router
 from Entities import Base
 from Services import ContextService
 
@@ -20,7 +20,7 @@ def init_db():
     ContextService.set_item("engine", engine)
 
 def init_router():
-    app.include_router(products_router)
+    app.include_router(api_router)
 
 if __name__ == '__main__':
     init_environment()
