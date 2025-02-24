@@ -5,3 +5,4 @@ class ProductSchema(BaseModel):
     id: Optional[int] = None
     name: str
     description: str
+    image: str

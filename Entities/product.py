@@ -8,3 +8,4 @@ class Product(Base):
     id = Column(Integer, autoincrement=True, primary_key=True)
     name = Column(String(30), nullable=False)
     description = Column(String)
+    image_path = Column(String)
